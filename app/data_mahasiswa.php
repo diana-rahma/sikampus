@@ -42,8 +42,8 @@
                     <td><?php echo $mhs['nama']; ?></td>
                     <td><?php echo $mhs['nim']; ?></td>
                     <td><?php echo $mhs['semester']; ?></td>
-                    <td><a href="delete/hapus_data.php?id=<?php echo $mhs['id']; ?>" class="btn btn-sm btn-danger">Hapus</a>
-                        <a href="" class="btn btn-sm btn-success">Edit</a>
+                    <td><a onclick="hapus_data(<?php echo $mhs['id']; ?>)" class="btn btn-sm btn-danger">Hapus</a>
+                      <!-- <a href="" class="btn btn-sm btn-success">Edit</a> -->
                     </td>
                   </tr>
                 <?php } ?>
@@ -109,3 +109,23 @@
   </div>
   <!-- /.modal-dialog -->
 </div>
+
+<script>
+  function hapus_data(data_id) {
+    // alert('ok');
+    // window.location=("delete/hapus_data.php?id="+data_id);
+    Swal.fire({
+      title: 'Apakah anda yakin untuk menghapus data ini?',
+      // showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: 'Hapus Data',
+      confirmButtonColor: '#CD5C5C',
+      // denyButtonText: `Don't save`,
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        window.location = ("delete/hapus_data.php?id="+data_id);
+      }
+    })
+  }
+</script>
