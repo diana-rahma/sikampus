@@ -49,8 +49,8 @@ $view = mysqli_fetch_array($query);
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-6">
-                            <img src="foto/<?php echo $view['foto']; ?>" alt="" width="100px" class="rounded-float-rights">
+                        <div class="col-sm-12">
+                            <img src="foto/<?php echo $view['foto']; ?>" alt="" width="200px" class="rounded float-rights">
                         </div>
                     </div>
                     <br>
