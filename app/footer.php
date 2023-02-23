@@ -85,8 +85,12 @@
       success: function(data) {
         $('#hasil-data-view').html(data);
       }
-
-    })
+    });
     console.log(nim);
-  })
+  });
+  $(document).ready(function(){
+    setInterval(function(){
+      $('#report-mhs').load("banner.php");
+    });
+  });
 </script>
