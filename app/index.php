@@ -46,6 +46,12 @@ include('header.php'); ?>
         else if ($_GET['page'] == 'edit-data') {
           include('edit/edit_data.php');
         }
+        else if ($_GET['page'] == 'input-nilai') {
+          include('input_nilai.php');
+        }
+        else if ($_GET['page'] == 'insert-nilai') {
+          include('nilai/insert_nilai.php');
+        }
         else {
           include('not_found.php');
         }
