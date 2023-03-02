@@ -14,7 +14,7 @@ $view = mysqli_fetch_array($query);
             <div class="card-body">
                 <form method="post" action="update/update_data.php" enctype="multipart/form-data">
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-4">
                             <!-- text input -->
                             <div class="form-group">
                                 <label>Nama</label>
@@ -22,15 +22,13 @@ $view = mysqli_fetch_array($query);
                                 <input type="text" class="form-control" placeholder="Nama" name="id" value="<?php echo $view['id']; ?>" hidden>
                             </div>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-4">
                             <div class="form-group">
                                 <label>NIM</label>
                                 <input type="text" class="form-control" placeholder="NIM" name="nim" value="<?php echo $view['nim']; ?>">
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-4">
                             <!-- textarea -->
                             <div class="form-group">
                                 <label>Semester</label>
@@ -43,9 +41,23 @@ $view = mysqli_fetch_array($query);
                                 </select>
                             </div>
                         </div>
-                        <div class="col-sm-6">
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
                             <div class="form-group">
-                                <label>Input Nilai</label>
+                                <label>Input Nilai Normatif</label>
+                                <input type="text" class="form-control" placeholder="Masukkan Nilai" name="nilai">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>Input Nilai Adaptif</label>
+                                <input type="text" class="form-control" placeholder="Masukkan Nilai" name="nilai">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>Input Nilai Produktif</label>
                                 <input type="text" class="form-control" placeholder="Masukkan Nilai" name="nilai">
                             </div>
                         </div>
