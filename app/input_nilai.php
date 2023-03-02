@@ -29,7 +29,7 @@
               <tbody>
                 <?php
                 $no = 0;
-                $query = mysqli_query($koneksi, "SELECT * FROM tb_mahasiswa");
+                $query = mysqli_query($koneksi, "SELECT * FROM tb_nilai, tb_mahasiswa");
                 while ($mhs = mysqli_fetch_array($query)) {
                   $no++
                 ?>
@@ -40,10 +40,15 @@
                     <td><?php echo $mhs['semester']; ?></td>
                     <td>
                       <a href="index.php?page=insert-nilai&& id=<?php echo $mhs['id']; ?>" class="btn btn-sm btn-success">Input Nilai</a>
-                      <a class="view-data btn btn-sm btn-primary" data-toggle="modal" data-target="#modal-view" 
+                      <a class="view-nilai btn btn-sm btn-primary" data-toggle="modal" data-target="#modal-view" 
                       data-nama="<?php echo $mhs['nama']; ?>"
                       data-nim="<?php echo $mhs['nim']; ?>"
-                      data-semester="<?php echo $mhs['semester']; ?>">View Data</a>
+                      data-semester="<?php echo $mhs['semester']; ?>"
+                      data-normatif="<?php echo $mhs['nilai_normatif']; ?>"
+                      data-adaptif="<?php echo $mhs['nilai_adaptif']; ?>"
+                      data-produktif="<?php echo $mhs['nilai_produktif']; ?>"
+                      >View Data</a>
+                      <a href="index.php?page=insert-nilai&& id=<?php echo $mhs['id']; ?>" class="btn btn-sm btn-secondary">Cetak Rapot</a>
                     </td>
                   </tr>
                 <?php } ?>
@@ -80,7 +85,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form method="get" action="add/tambah_data.php">
+      <form method="get" action="add/tambah_nilai.php">
         <div class="modal-body" id="hasil-data-view">
           
         </div>

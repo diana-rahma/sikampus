@@ -12,7 +12,7 @@ $view = mysqli_fetch_array($query);
             </div>
             <!-- /.card-header -->
             <div class="card-body">
-                <form method="post" action="update/update_data.php" enctype="multipart/form-data">
+                <form method="get" action="add/tambah_nilai.php" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-sm-4">
                             <!-- text input -->
@@ -46,19 +46,19 @@ $view = mysqli_fetch_array($query);
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label>Input Nilai Normatif</label>
-                                <input type="text" class="form-control" placeholder="Masukkan Nilai" name="nilai">
+                                <input type="text" class="form-control" placeholder="Masukkan Nilai" name="nilai_normatif">
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label>Input Nilai Adaptif</label>
-                                <input type="text" class="form-control" placeholder="Masukkan Nilai" name="nilai">
+                                <input type="text" class="form-control" placeholder="Masukkan Nilai" name="nilai_adaptif">
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label>Input Nilai Produktif</label>
-                                <input type="text" class="form-control" placeholder="Masukkan Nilai" name="nilai">
+                                <input type="text" class="form-control" placeholder="Masukkan Nilai" name="nilai_produktif">
                             </div>
                         </div>
                     </div>
@@ -71,7 +71,7 @@ $view = mysqli_fetch_array($query);
                     <br>
                     <div class="row">
                         <div class="col-sm-12">
-                            <img src="foto/<?php echo $view['foto']; ?>" alt="" width="200px" class="rounded float-left">
+                            <img src="foto/<?php echo $view['foto']; ?>" alt="" width="200px" class="rounded float-rights">
                         </div>
                     </div>
                     <br>
